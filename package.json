@@ -1,0 +1,11 @@
+{
+  "name": "carlospaelinck.io",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.9",
+    "gulp-less": "^1.3.6"
+  }
+}
