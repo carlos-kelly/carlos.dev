@@ -1,8 +1,8 @@
 
 /**
- * Publications
+ * carlospaelinck.io
  * Gulp Configuration File
- * 2014 Michael Kelly and Carlos Paelinck
+ * 2014 Carlos Paelinck
  */
 
 function logError(err) {
