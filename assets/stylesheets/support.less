@@ -17,3 +17,11 @@
 		display: @display;
 	}
 }
+
+.svg-picture(@image, @width, @height, @display) {
+	background-image: url("../img/@{image}.svg");
+	background-repeat: no-repeat;
+	width: @width;
+	height: @height;
+	display: @display;
+}
