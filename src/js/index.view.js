@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
-import Radium from 'radium'
+import { Intro } from './components/intro';
+import { Work } from './components/work';
 
-@Radium
 export class IndexView extends Component {
   render() {
     return (
-      <div style={[ styles.base ]}>
-        Carlos Paelinck
+      <div style={styles.container}>
+        <Intro />
+        <Work />
       </div>
     )
   }
 }
 
 const styles = {
-  base: {
-    color: '#f00'
+  container: {
+    margin: '36vh auto 0',
+    textAlign: 'left',
+    width: '80%'
   }
 }
