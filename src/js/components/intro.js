@@ -22,6 +22,7 @@ const styles = {
     fontWeight: 500
   },
   header: {
-    fontSize: '1.45rem'
+    fontSize: '1.45rem',
+    lineHeight: '1.3em'
   }
 }

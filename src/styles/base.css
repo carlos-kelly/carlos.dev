@@ -30,5 +30,10 @@ html, body {
 }
 
 a, a:hover, a:active, a:link {
+  display: inline;
   color: #424242;
+}
+
+a:hover, a:active {
+  color: #667;
 }

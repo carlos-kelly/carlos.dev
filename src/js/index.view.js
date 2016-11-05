@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Intro } from './components/intro';
-import { Work } from './components/work';
+import { Intro, Work, Links } from './components'
 
 export class IndexView extends Component {
   render() {
@@ -8,6 +7,7 @@ export class IndexView extends Component {
       <div style={styles.container}>
         <Intro />
         <Work />
+        <Links />
       </div>
     )
   }
