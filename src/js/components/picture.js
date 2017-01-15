@@ -1,18 +1,9 @@
-import React from 'react'
-import carlosImg from '../../images/carlos.png'
+import styled from 'styled-components'
 
-export const Picture = () => (
-  <img
-    src={carlosImg}
-    style={style.image}
-  />
-)
-
-const style = {
-  image: {
-    width: '120px',
-    height: '120px',
-    borderRadius: '60px',
-    margin: '0 0 1em'
-  }
-}
+export const Picture = styled.img`
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  border: 1px solid #bbb;
+  margin: 0 0 1em;
+`

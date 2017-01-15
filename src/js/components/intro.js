@@ -1,28 +1,27 @@
 import React from 'react'
 import { Picture } from './picture'
+import { Strong } from './type'
+import carlosImg from '../../images/carlos.png'
+import styled from 'styled-components'
+
+const Name = styled.div`
+  font-size: 2.125rem;
+  line-height: 1em;
+`
+
+const Header = styled.div`
+  font-size: 1.45rem;
+  line-height: 1.3em;
+`
 
 export const Intro = () => (
   <div>
-    <Picture />
-    <div style={styles.name}>
-      Hello I&#8217;m&#32;<span style={styles.strong}>Carlos Paelinck</span>,
-    </div>
-    <div style={styles.header}>
-      a Software Engineer in Omaha, Nebraska.
-    </div>
+    <Picture src={carlosImg} />
+    <Name>
+      Hello I&#8217;m&#32;<Strong>Carlos Paelinck</Strong>,
+    </Name>
+    <Header>
+      a Software Developer in Omaha, Nebraska.
+    </Header>
   </div>
 )
-
-const styles = {
-  name: {
-    fontSize: '2.125rem',
-    lineHeight: '1em'
-  },
-  strong: {
-    fontWeight: 500
-  },
-  header: {
-    fontSize: '1.45rem',
-    lineHeight: '1.3em'
-  }
-}

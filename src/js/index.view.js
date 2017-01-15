@@ -1,22 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Intro, Work, Links } from './components'
+import styled from 'styled-components'
 
-export class IndexView extends Component {
-  render() {
-    return (
-      <div style={styles.container}>
-        <Intro />
-        <Work />
-        <Links />
-      </div>
-    )
-  }
-}
+const IndexContainer = styled.div`
+  margin: 30vh auto 0;
+  text-align: left;
+  width: 80%;
+`
 
-const styles = {
-  container: {
-    margin: '36vh auto 0',
-    textAlign: 'left',
-    width: '80%'
-  }
-}
+export const IndexView = () => (
+  <IndexContainer>
+    <Intro />
+    <Work />
+    <Links />
+  </IndexContainer>
+)

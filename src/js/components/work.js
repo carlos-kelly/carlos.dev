@@ -1,7 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+import { Strong } from './type'
+
+const WorkContainer = styled.div`
+  font-size: 1.5rem;
+  line-height: 1.3em;
+  margin: 1.25rem 0 0;
+`
 
 export const Work = () => (
-  <div style={styles.work}>
+  <WorkContainer>
     I work at&nbsp;
     <a
       href="https://www.formidable.com"
@@ -9,17 +17,6 @@ export const Work = () => (
     >
       Formidable Labs
     </a>
-    &nbsp;and love <span style={styles.strong}>iOS</span>, <span style={styles.strong}>JavaScript</span> &amp; <span style={styles.strong}>React</span> development.
-  </div>
+    &nbsp;and love <Strong>iOS</Strong>, <Strong>JavaScript</Strong> &amp; <Strong>React</Strong> development.
+  </WorkContainer>
 )
-
-const styles = {
-  work: {
-    fontSize: '1.5rem',
-    margin: '1.25rem 0 0',
-    lineHeight: '1.3em'
-  },
-  strong: {
-    fontWeight: 500
-  }
-}
