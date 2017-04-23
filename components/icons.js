@@ -11,6 +11,10 @@ const SVG = styled.svg`
   &:active {
     transform: scale(0.9);
   }
+
+  @media (max-width: 48em) {
+    margin: 2em 1em 0 0;
+  }
 `
 
 export const GitHubIcon = () => (
