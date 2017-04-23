@@ -7,5 +7,6 @@ export const Content = styled.div`
 
   @media (max-width: 48em) {
     margin: 8vh auto 0;
+    width: 85%;
   }
 `
