@@ -3,17 +3,12 @@ import styled from "styled-components"
 
 const SVG = styled.svg`
   fill: #263238;
-  margin: 2em 1.25em 0 0;
   transition: transform ease-in-out 0.25s;
   &:hover {
     transform: scale(1.1);
   }
   &:active {
     transform: scale(0.9);
-  }
-
-  @media (max-width: 48em) {
-    margin: 2em 1em 0 0;
   }
 `
 

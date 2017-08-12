@@ -20,8 +20,20 @@ export const Header = styled.div`
 export const A = styled.a`
   text-decoration: none;
   color: #263238;
+  outline-color: #7c4dff;
 
   &:hover, &:active {
     text-decoration: underline;
+  }
+`
+
+export const IconLink = styled(A)`
+  margin: 2em 1.25em 0 0;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+
+  @media (max-width: 48em) {
+    margin: 2em 1em 0 0;
   }
 `

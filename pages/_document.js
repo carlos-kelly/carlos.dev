@@ -1,6 +1,5 @@
 import Document, { Head, Main, NextScript } from "next/document"
-import styleSheet from "styled-components/lib/models/StyleSheet"
-import { injectGlobal } from "styled-components"
+import { injectGlobal, ServerStyleSheet } from "styled-components"
 
 injectGlobal`
   html, body {
@@ -33,20 +32,10 @@ injectGlobal`
 `
 
 export default class BaseDocument extends Document {
-  static async getInitialProps({ renderPage }) {
-    const page = renderPage()
-    const styles = (
-      <style
-        dangerouslySetInnerHTML={{
-          __html: styleSheet.rules().map(rule => rule.cssText).join("\n")
-        }}
-      />
-    )
-
-    return { ...page, styles }
-  }
-
   render() {
+    const styleSheet = new ServerStyleSheet()
+    const pageContent = styleSheet.collectStyles(<Main />)
+    const styleTags = styleSheet.getStyleElement()
     return (
       <html>
         <Head>
@@ -63,9 +52,10 @@ export default class BaseDocument extends Document {
             name="apple-mobile-web-app-capable"
             content="yes"
           />
+          { styleTags }
         </Head>
         <body>
-          <Main />
+          { pageContent }
           <NextScript />
         </body>
       </html>

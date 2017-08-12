@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Content } from "../components/layout"
 import { Picture } from "../components/picture"
-import { Name, Header, Strong, A } from "../components/text"
+import { Name, Header, Strong, A, IconLink } from "../components/text"
 import {
   GitHubIcon, TwitterIcon, MediumIcon, PublicationsIcon, InstagramIcon
 } from "../components/icons"
@@ -21,35 +21,35 @@ export default () => (
         <Strong>Formidable.</Strong>
       </A>
     </Header>
-    <A
+    <IconLink
       href="https://github.com/carlospaelinck"
       target="_blank"
     >
       <GitHubIcon />
-    </A>
-    <A
+    </IconLink>
+    <IconLink
       href="https://twitter.com/carlos_paelinck"
       target="_blank"
     >
       <TwitterIcon />
-    </A>
-    <A
+    </IconLink>
+    <IconLink
       href="https://medium.com/@carlos_paelinck"
       target="_blank"
     >
       <MediumIcon />
-    </A>
-    <A
+    </IconLink>
+    <IconLink
       href="https://www.instagram.com/carlospaelinck/"
       target="_blank"
     >
       <InstagramIcon />
-    </A>
-    <A
+    </IconLink>
+    <IconLink
       href="https://www.publicationsapp.com"
       target="_blank"
     >
       <PublicationsIcon />
-    </A>
+    </IconLink>
   </Content>
 )

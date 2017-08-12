@@ -12,10 +12,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^2.1.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "styled-components": "^1.4.4"
+    "next": "3.0.3",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "styled-components": "2.1.2"
   },
   "devDependencies": {
     "babel-preset-env": "^1.4.0"
