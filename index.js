@@ -3,10 +3,12 @@ import { createElement } from "React"
 import { renderToString } from "react-dom/server"
 import { Server } from "hapi"
 import { extractCritical } from 'emotion-server'
+import pageTemplate from "./src/page-template"
 
 const server = new Server()
+const port = 3000
 
-server.connection({ port: 3000, host: "localhost" })
+server.connection({ port, host: "localhost" })
 server.route({
   method: "GET",
   path: "/",
@@ -15,19 +17,18 @@ server.route({
     const {
       html, ids, css
     } = extractCritical(renderToString(app))
-    reply(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <meta charset="UTF-8">
-          <title>carlospaelinck.io</title>
-          <style>${css}</style>
-        </head>
-        <body>
-          ${html}
-        </body>
-      </html>
-    `)
+    reply(pageTemplate({ html, css }))
   }
 })
-server.start(error => console.error(error))
+server.route({
+  method: "*",
+  path: "/{p*}",
+  handler: (request, reply) => reply.redirect("/")
+})
+server.start(error => {
+  if (error) {
+    console.error(error)
+    return
+  }
+  console.log(`Running carlospaelinck.io on port ${port} 🏳️‍🌈🚀`)
+})

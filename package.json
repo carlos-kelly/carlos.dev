@@ -6,7 +6,7 @@
   "author": "Carlos Paelinck",
   "scripts": {
     "start": "nodemon index.js --exec babel-node",
-    "build": "babel index.js -d dist"
+    "build": "babel index.js -d dist && babel src -d dist/src"
   },
   "license": "MIT",
   "dependencies": {
