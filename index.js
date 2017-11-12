@@ -1,5 +1,5 @@
 import App from "./src"
-import { createElement } from "React"
+import { createElement } from "react"
 import { renderToString } from "react-dom/server"
 import { Server } from "hapi"
 import { extractCritical } from 'emotion-server'
