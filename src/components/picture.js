@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "react-emotion"
 
 export const Picture = styled.img`
   width: 150px;

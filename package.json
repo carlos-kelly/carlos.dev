@@ -1,23 +1,27 @@
 {
-  "name": "carlospaelinck.io",
-  "version": "2.0.0",
-  "description": "Carlos Paelinck Website",
+  "name": "carlos.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
   "main": "index.js",
-  "repository": "git@github.com:carlospaelinck/carlospaelinck.io.git",
-  "author": "Carlos Paelinck <carlos@carlospaelinck.com>",
-  "license": "MIT",
+  "author": "Carlos Paelinck",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "start": "nodemon index.js --exec babel-node",
+    "build": "babel index.js -d dist"
   },
+  "license": "MIT",
   "dependencies": {
-    "next": "3.0.3",
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "styled-components": "2.1.2"
+    "emotion": "^8.0.9",
+    "emotion-server": "^8.0.9",
+    "hapi": "^16.6.2",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-emotion": "^8.0.9"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.4.0"
+    "babel-cli": "^6.26.0",
+    "babel-plugin-emotion": "^8.0.9",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.12.1"
   }
 }
