@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "react-emotion"
-import { appFont } from "./constants"
+import { appFont, color } from "./constants"
 import { Content } from "./components/layout"
 import { Name, Header, Strong, A, IconLink } from "./components/text"
 import {
@@ -8,7 +8,8 @@ import {
 } from "./components/icons"
 
 const App = styled.div({
-  fontFamily: appFont
+  fontFamily: appFont,
+  color
 })
 
 export default () => (
@@ -22,6 +23,7 @@ export default () => (
         <A
           href="https://www.formidable.com"
           target="_blank"
+          rel="noopener"
         >
           <Strong>Formidable.</Strong>
         </A>
@@ -29,30 +31,35 @@ export default () => (
       <IconLink
         href="https://github.com/carlospaelinck"
         target="_blank"
+        rel="noopener"
       >
         <GitHubIcon />
       </IconLink>
       <IconLink
         href="https://twitter.com/carlos_paelinck"
         target="_blank"
+        rel="noopener"
       >
         <TwitterIcon />
       </IconLink>
       <IconLink
         href="https://medium.com/@carlos_paelinck"
         target="_blank"
+        rel="noopener"
       >
         <MediumIcon />
       </IconLink>
       <IconLink
         href="https://www.instagram.com/carlospaelinck/"
         target="_blank"
+        rel="noopener"
       >
         <InstagramIcon />
       </IconLink>
       <IconLink
         href="https://www.publicationsapp.com"
         target="_blank"
+        rel="noopener"
       >
         <PublicationsIcon />
       </IconLink>
