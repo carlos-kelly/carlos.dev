@@ -1,4 +1,4 @@
-import { color } from "./constants"
+import { color } from "./constants";
 
 export default ({ html, css }) => `
   <!DOCTYPE html>
@@ -16,4 +16,4 @@ export default ({ html, css }) => `
       ${html}
     </body>
   </html>
-`
+`;

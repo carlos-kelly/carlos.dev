@@ -1,4 +1,4 @@
-import styled from "react-emotion"
+import styled from "react-emotion";
 
 export const Content = styled.div`
   margin: 20vh auto 0;
@@ -9,4 +9,4 @@ export const Content = styled.div`
     margin: 8vh auto 0;
     width: 85%;
   }
-`
+`;

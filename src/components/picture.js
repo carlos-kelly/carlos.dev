@@ -1,4 +1,4 @@
-import styled from "react-emotion"
+import styled from "react-emotion";
 
 export const Picture = styled.img`
   width: 150px;
@@ -6,4 +6,4 @@ export const Picture = styled.img`
   border-radius: 75px;
   border: 2px solid #263238;
   margin: 0 0 1em;
-`
+`;
