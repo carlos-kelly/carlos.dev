@@ -1,32 +1,36 @@
 import App from "./src";
-import { createElement } from "react";
-import { renderToString } from "react-dom/server";
-import { Server } from "hapi";
-import { extractCritical } from "emotion-server";
+import React from "react";
+import express from "express";
+import { renderToNodeStream } from "react-dom/server";
+import { ServerStyleSheet } from "styled-components";
 import pageTemplate from "./src/page-template";
 
-const server = new Server();
+const server = express();
 const port = 3000;
 
-server.connection({ port, host: "localhost" });
-server.route({
-  method: "GET",
-  path: "/",
-  handler: (request, reply) => {
-    const app = createElement(App);
-    const { html, ids, css } = extractCritical(renderToString(app));
-    reply(pageTemplate({ html, css }));
-  }
+server.get("*", function(req, res) {
+  res.write(`
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>carloskel.ly</title>
+        <meta name="theme-color" content="#ffffff">
+        <meta name="description" content="Carlos Personal Webpage">
+        <meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+      </head>
+      <body>
+  `);
+  const app = React.createElement(App);
+  const sheet = new ServerStyleSheet();
+  const jsx = sheet.collectStyles(app);
+  const stream = sheet.interleaveWithNodeStream(renderToNodeStream(jsx));
+  stream.pipe(
+    res,
+    { end: false }
+  );
+  stream.on("end", () => res.end("</body></html>"));
 });
-server.route({
-  method: "*",
-  path: "/{p*}",
-  handler: (request, reply) => reply.redirect("/")
-});
-server.start(error => {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  console.log(`Running carlospaelinck.io on port ${port} 🏳️‍🌈🚀`);
-});
+
+server.listen(port, () => `Carlos starting on port: ${port}`);

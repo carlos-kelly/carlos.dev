@@ -1,6 +1,6 @@
-import styled from "react-emotion";
+import styled from "styled-components";
 
-export const Content = styled.div`
+export const Content = styled.article`
   margin: 20vh auto 0;
   text-align: left;
   width: 80%;
