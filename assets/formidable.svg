@@ -1,0 +1,10 @@
+<svg width="29px" height="39px" viewBox="0 0 29 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g fill="#000">
+      <polygon points="9 0 0 35 9 25"></polygon>
+      <polygon fill-opacity="0.7" points="9 0 28 18 9 25"></polygon>
+      <polygon fill-opacity="0.8" points="9 39 28 18 9 25"></polygon>
+      <polygon fill-opacity="0.9" points="0 35 9 25 9 39"></polygon>
+    </g>
+  </g>
+</svg>
