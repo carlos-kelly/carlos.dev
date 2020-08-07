@@ -53,9 +53,9 @@ h2 {
 
 .links {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 1.5rem;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 
 .links a img {
@@ -69,7 +69,7 @@ h2 {
   justify-content: flex-start;
   flex-direction: column;
   color: #4b4545;
-  font-weight: 900;
+  font-weight: 700;
   transition: transform 0.2s ease-in-out;
   text-align: center;
 }
@@ -83,6 +83,14 @@ h2 {
     max-width: 80vw;
   }
 
+  .links {
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 2.5rem;
+    grid-column-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 32em) {
   .links {
     grid-template-columns: repeat(2, auto);
     grid-row-gap: 2.5rem;
